@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WindowsCustomizations>
+  <PackageConfig xmlns="urn:schemas-Microsoft-com:Windows-ICD-Package-Config.v1.0">
+    <ID>{3c9f95a0-8888-43a3-b3db-dcae34034f2d}</ID>
+    <Name>sharedpc</Name>
+    <Version>1.3</Version>
+    <OwnerType>SystemIntegrator</OwnerType>
+    <Rank>0</Rank>
+    <Notes></Notes>
+  </PackageConfig>
+  <Settings xmlns="urn:schemas-microsoft-com:windows-provisioning">
+    <Customizations>
+      <Common>
+        <Accounts>
+          <Users>
+            <User UserName="ScottLock">
+              <Password>LockScott</Password>
+              <UserGroup>Administrators</UserGroup>
+            </User>
+            <User UserName="TCKC-Admin" Name="TCKC-Admin">
+              <Password>Grating7&amp;Evasion1!Saturday0)Squeamish</Password>
+              <UserGroup>Administrators</UserGroup>
+            </User>
+          </Users>
+        </Accounts>
+        <Browser>
+          <FavoriteBarItems>
+            <FavoriteBarItem FavoriteItem="aSupportPortal" Name="SupportPortal">
+              <ItemName>Computer Support</ItemName>
+              <ItemUrl>https://support.kcconnect.me</ItemUrl>
+            </FavoriteBarItem>
+            <FavoriteBarItem FavoriteItem="bOutlookEmail" Name="OutlookEmail">
+              <ItemName>Outlook Email</ItemName>
+              <ItemUrl>https://outlook.office.com</ItemUrl>
+            </FavoriteBarItem>
+            <FavoriteBarItem FavoriteItem="cOffice" Name="Office">
+              <ItemName>Microsoft Office</ItemName>
+              <ItemUrl>https://office.com</ItemUrl>
+            </FavoriteBarItem>
+            <FavoriteBarItem FavoriteItem="dKansas Works" Name="Kansas Works">
+              <ItemName>KansasWorks</ItemName>
+              <ItemUrl>https://www.kansasworks.com/</ItemUrl>
+            </FavoriteBarItem>
+          </FavoriteBarItems>
+        </Browser>
+        <CleanPC>
+          <CleanPCWithoutRetainingUserData>Enable</CleanPCWithoutRetainingUserData>
+        </CleanPC>
+        <DevDetail>
+          <DNSComputerName>ncircle-wn-%SERIAL%</DNSComputerName>
+        </DevDetail>
+        <DeviceFormFactor>
+          <DeviceForm>Desktop</DeviceForm>
+        </DeviceFormFactor>
+        <LanguagePackManagement>
+          <LanguagePackInstall>
+            <Language LanguageId="en-US" Name="en-US">
+              <CopyToDeviceInternationalSettings>True</CopyToDeviceInternationalSettings>
+              <EnableLanguageFeatureInstallations>True</EnableLanguageFeatureInstallations>
+              <InstallLanguage>True</InstallLanguage>
+            </Language>
+            <Language LanguageId="es-US" Name="es-US">
+              <CopyToDeviceInternationalSettings>True</CopyToDeviceInternationalSettings>
+              <EnableLanguageFeatureInstallations>True</EnableLanguageFeatureInstallations>
+              <InstallLanguage>True</InstallLanguage>
+            </Language>
+          </LanguagePackInstall>
+          <SystemPreferredUILanguage>en-US</SystemPreferredUILanguage>
+        </LanguagePackManagement>
+        <Policies>
+          <ApplicationManagement>
+            <AllowAllTrustedApps>Yes</AllowAllTrustedApps>
+          </ApplicationManagement>
+          <Browser>
+            <ConfigureFavoritesBar>Enable</ConfigureFavoritesBar>
+          </Browser>
+          <Experience>
+            <AllowCortana>No</AllowCortana>
+            <AllowFindMyDevice>No</AllowFindMyDevice>
+            <AllowTailoredExperiencesWithDiagnosticData>No</AllowTailoredExperiencesWithDiagnosticData>
+            <DoNotShowFeedbackNotifications>Do not show</DoNotShowFeedbackNotifications>
+          </Experience>
+          <FileExplorer>
+            <AllowOptionToShowNetwork>Disallow option</AllowOptionToShowNetwork>
+            <SetAllowedStorageLocations>Removable Drives</SetAllowedStorageLocations>
+          </FileExplorer>
+          <Games>
+            <AllowAdvancedGamingServices>No</AllowAdvancedGamingServices>
+          </Games>
+          <Privacy>
+            <AllowInputPersonalization>No</AllowInputPersonalization>
+            <DisableAdvertisingId>Yes</DisableAdvertisingId>
+          </Privacy>
+          <TimeLanguageSettings>
+            <ConfigureTimeZone>Central Standard Time</ConfigureTimeZone>
+          </TimeLanguageSettings>
+          <Update>
+            <AllowAutoUpdate>Auto-install, Notify before restart</AllowAutoUpdate>
+          </Update>
+          <WindowsAI>
+            <DisableAIDataAnalysis>Disabled Data Analysis for Windows AI.</DisableAIDataAnalysis>
+            <TurnOffWindowsCopilot>Disabled Windows Copilot</TurnOffWindowsCopilot>
+          </WindowsAI>
+          <WindowsLogon>
+            <EnableFirstLogonAnimation>No</EnableFirstLogonAnimation>
+          </WindowsLogon>
+        </Policies>
+        <ProvisioningCommands>
+          <PrimaryContext>
+            <Command>
+              <CommandConfig Name="softwareremoval">
+                <CommandFile>C:\Users\kbowman\Documents\labsetup\dev\packages\softwareremoval.bat</CommandFile>
+                <CommandLine>cmd.exe /c "softwareremoval.bat"</CommandLine>
+                <ContinueInstall>True</ContinueInstall>
+                <RestartRequired>False</RestartRequired>
+              </CommandConfig>
+              <CommandConfig Name="Win11Debloat">
+                <CommandFile>C:\Users\kbowman\Documents\labsetup\dev\packages\Win11Debloat.bat</CommandFile>
+                <CommandLine>cmd.exe /c "Win11Debloat.bat"</CommandLine>
+                <ContinueInstall>True</ContinueInstall>
+                <DependencyPackages>
+                  <Dependency Name="Win11Debloat">C:\Users\kbowman\Documents\labsetup\dev\packages\Win11Debloat.cab</Dependency>
+                </DependencyPackages>
+                <RestartRequired>False</RestartRequired>
+              </CommandConfig>
+              <CommandConfig Name="Zoom">
+                <CommandFile>C:\Users\kbowman\Documents\labsetup\dev\packages\ZoomInstallerFull.msi</CommandFile>
+                <CommandLine>msiexec.exe /i "ZoomInstallerFull.msi" /qn /norestart  /l*v c:\tckc\zoom-install.log</CommandLine>
+                <ContinueInstall>True</ContinueInstall>
+                <RestartRequired>False</RestartRequired>
+              </CommandConfig>
+              <CommandConfig Name="teams">
+                <CommandFile>C:\Users\kbowman\Documents\labsetup\dev\packages\teams.bat</CommandFile>
+                <CommandLine>cmd.exe /c "teams.bat"</CommandLine>
+                <ContinueInstall>True</ContinueInstall>
+                <DependencyPackages>
+                  <Dependency Name="teamscab">C:\Users\kbowman\Documents\labsetup\dev\packages\teams.cab</Dependency>
+                </DependencyPackages>
+                <RestartRequired>False</RestartRequired>
+              </CommandConfig>
+            </Command>
+          </PrimaryContext>
+        </ProvisioningCommands>
+        <SharedPC>
+          <AccountManagement>
+            <AccountModel>Only guest</AccountModel>
+            <DeletionPolicy>Delete immediately</DeletionPolicy>
+            <EnableAccountManager>True</EnableAccountManager>
+          </AccountManagement>
+          <EnableSharedPCMode>True</EnableSharedPCMode>
+          <PolicyCustomization>
+            <MaintenanceStartTime>720</MaintenanceStartTime>
+            <RestrictLocalStorage>True</RestrictLocalStorage>
+            <SignInOnResume>True</SignInOnResume>
+          </PolicyCustomization>
+        </SharedPC>
+      </Common>
+    </Customizations>
+  </Settings>
+</WindowsCustomizations>

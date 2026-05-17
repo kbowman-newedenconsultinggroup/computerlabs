@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WindowsCustomizations>
+  <PackageConfig xmlns="urn:schemas-Microsoft-com:Windows-ICD-Package-Config.v1.0">
+    <ID>{3c9f95a0-8888-43a3-b3db-dcae34034f2d}</ID>
+    <Name>config</Name>
+    <Version>1.1</Version>
+    <OwnerType>SystemIntegrator</OwnerType>
+    <Rank>0</Rank>
+    <Notes></Notes>
+  </PackageConfig>
+  <Settings xmlns="urn:schemas-microsoft-com:windows-provisioning">
+    <Customizations>
+      <Common>
+        <Accounts>
+          <Users>
+            <User UserName="ScottLock">
+              <Password>LockScott</Password>
+              <UserGroup>Administrators</UserGroup>
+            </User>
+          </Users>
+        </Accounts>
+        <Browser>
+          <FavoriteBarItems>
+            <FavoriteBarItem FavoriteItem="Kansas Works" Name="Kansas Works">
+              <ItemName>KansasWorks</ItemName>
+              <ItemUrl>https://www.kansasworks.com/</ItemUrl>
+            </FavoriteBarItem>
+            <FavoriteBarItem FavoriteItem="OutlookEmail" Name="OutlookEmail">
+              <ItemName>Email</ItemName>
+              <ItemUrl>https://outlook.office.com</ItemUrl>
+            </FavoriteBarItem>
+            <FavoriteBarItem FavoriteItem="SupportPortal" Name="SupportPortal">
+              <ItemName>Support</ItemName>
+              <ItemUrl>https://support.kcconnect.me</ItemUrl>
+            </FavoriteBarItem>
+            <FavoriteBarItem FavoriteItem="TechConnect" Name="TechConnect">
+              <ItemName>DLX Program</ItemName>
+              <ItemUrl>https://kcconnect.me</ItemUrl>
+            </FavoriteBarItem>
+          </FavoriteBarItems>
+        </Browser>
+        <CleanPC>
+          <CleanPCWithoutRetainingUserData>Enable</CleanPCWithoutRetainingUserData>
+        </CleanPC>
+        <DevDetail>
+          <DNSComputerName>dlxat-wn-%SERIAL%</DNSComputerName>
+        </DevDetail>
+        <DeviceFormFactor>
+          <DeviceForm>Notebook</DeviceForm>
+        </DeviceFormFactor>
+        <LanguagePackManagement>
+          <LanguagePackInstall>
+            <Language LanguageId="en-US" Name="en-US">
+              <CopyToDeviceInternationalSettings>True</CopyToDeviceInternationalSettings>
+              <EnableLanguageFeatureInstallations>True</EnableLanguageFeatureInstallations>
+              <InstallLanguage>True</InstallLanguage>
+            </Language>
+            <Language LanguageId="es-US" Name="es-US">
+              <CopyToDeviceInternationalSettings>True</CopyToDeviceInternationalSettings>
+              <EnableLanguageFeatureInstallations>True</EnableLanguageFeatureInstallations>
+              <InstallLanguage>True</InstallLanguage>
+            </Language>
+          </LanguagePackInstall>
+          <SystemPreferredUILanguage>en-US</SystemPreferredUILanguage>
+        </LanguagePackManagement>
+        <OOBE>
+          <Desktop>
+            <HideOobe>True</HideOobe>
+          </Desktop>
+        </OOBE>
+        <Policies>
+          <ApplicationManagement>
+            <AllowAllTrustedApps>Yes</AllowAllTrustedApps>
+          </ApplicationManagement>
+          <Browser>
+            <ConfigureFavoritesBar>Enable</ConfigureFavoritesBar>
+          </Browser>
+          <Experience>
+            <AllowTailoredExperiencesWithDiagnosticData>No</AllowTailoredExperiencesWithDiagnosticData>
+            <DoNotShowFeedbackNotifications>Do not show</DoNotShowFeedbackNotifications>
+          </Experience>
+          <Privacy>
+            <DisableAdvertisingId>Yes</DisableAdvertisingId>
+          </Privacy>
+          <TimeLanguageSettings>
+            <ConfigureTimeZone>Central Standard Time</ConfigureTimeZone>
+          </TimeLanguageSettings>
+        </Policies>
+      </Common>
+    </Customizations>
+  </Settings>
+</WindowsCustomizations>

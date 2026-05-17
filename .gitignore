@@ -1,0 +1,9 @@
+ICDCommon*.log
+*.ppkg
+*.msi
+*.msix
+teams.cab
+hp-warrantychecker/*.csv
+data/transform/*.csv
+data/transform/*.log
+data/transform/2026*/
